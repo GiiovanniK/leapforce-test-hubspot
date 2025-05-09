@@ -137,3 +137,6 @@ dist
 
 # hubspot config
 hubspot.config.yml
+
+# vs code
+.vscode
