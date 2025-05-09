@@ -1,0 +1,37 @@
+[
+  {
+    "name": "cta_background_1",
+    "label": "CTA Background Image 1",
+    "type": "image"
+  },
+  {
+    "name": "cta_title_1",
+    "label": "CTA Title 1",
+    "type": "text"
+  },
+  {
+    "name": "cta_body_1",
+    "label": "CTA Body 1",
+    "type": "richtext"
+  },
+  {
+    "name": "cta_background_2",
+    "label": "CTA Background Image 2",
+    "type": "image"
+  },
+  {
+    "name": "cta_title_2",
+    "label": "CTA Title 2",
+    "type": "text"
+  },
+  {
+    "name": "cta_body_2",
+    "label": "CTA Body 2",
+    "type": "richtext"
+  },
+  {
+    "name": "cta_icon",
+    "label": "CTA Icon",
+    "type": "image"
+  }
+]

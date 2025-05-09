@@ -1,0 +1,25 @@
+{# Sets attributes used for the link field #}
+
+{% set href = module.link.url.href %}
+{% if module.link.url.type == "EMAIL_ADDRESS" %}
+  {% set href = "mailto:" + href %}
+{% endif %}
+{% set rel = [] %}
+{% if module.link.no_follow %}
+  {% do rel.append("nofollow") %}
+{% endif %}
+{% if module.link.open_in_new_tab %}
+  {% do rel.append("noopener") %}
+{% endif %}
+
+{# Button #}
+<div class="flex justify-center">
+  <div class="flex flex-row">
+      <a href="{{ href|escape_url }}" {% if module.link.open_in_new_tab %}target="_blank"{% endif %} {% if rel %}rel="{{ rel|join(" ")|escape_attr }}"{% endif %} class="CTAButton flex items-center transition-colors duration-200 text-[#BF564D] font-tt-commons text-[19px] font-normal hover:text-[#A6433A]">
+          {{ module.button_text|escape_html }}
+          {% if module.image.src %}
+          <img class="ml-2.5" src="{{ module.image.src }}" alt="{{ module.image.alt|escape_attr }}">
+          {% endif %}
+      </a>
+  </div>
+</div>
